@@ -1,3 +1,5 @@
+This is a more flexible and cleaner version of the [original NISPA code](https://github.com/BurakGurbuz97/NISPA). However, please refer to the [original repository](https://github.com/BurakGurbuz97/NISPA) to reproduce the results presented in the [paper](https://arxiv.org/abs/2206.09117).
+
 # NISPA: Neuro-Inspired Stability-Plasticity Adaptation for Continual Learning in Sparse Networks
 
 
@@ -8,15 +10,4 @@
 ## Paper
 https://arxiv.org/abs/2206.09117
 
-## Code
-This code was implemented using Python 3.8 (Anaconda) on Ubuntu 20.04.
 
-Please use environment.yaml to create a conda environment.
-
-EWC, SI, and MAS implementations are adapted from https://github.com/GT-RIPL/Continual-Learning-Benchmark
-
-Please refer to https://github.com/aimagelab/mammoth for replay baselines presented in the paper. 
-
-Each folder includes scripts to reproduce results presented in the paper. We used the following seeds: 0, 19, 42, 2022, 31415.
-
-Once learning is completed, final test accuracy is written to results (xlsx file) and logs (txt file) directories.
