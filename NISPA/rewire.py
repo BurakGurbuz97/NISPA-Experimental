@@ -127,8 +127,8 @@ class Growth():
                         
                         tgt_selection = torch.tensor(grow_indices[0][selection]).to(get_device())
                         src_selection = torch.tensor(grow_indices[1][selection]).to(get_device())
-                        weight_mask[tgt_selection, src_selection] = torch.ones((len(tgt_selection), *conn_shape), dtype = weight_mask.dtype).to(get_device())
-                        module.weight.data[tgt_selection, src_selection] = weight_init(module, (len(tgt_selection), *conn_shape))
+                        weight_mask[tgt_selection, src_selection] = torch.squeeze(torch.ones((len(tgt_selection), *conn_shape), dtype = weight_mask.dtype)).to(get_device())
+                        module.weight.data[tgt_selection, src_selection] = torch.squeeze(weight_init(module, (len(tgt_selection), *conn_shape)))
                         remainder_connections.append(0)
                 else:
                     remainder_connections.append(connection_quota[layer_index])
